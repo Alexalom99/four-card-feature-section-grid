@@ -120,7 +120,22 @@ body {
     /** Ejercicio 1. Muestra las tarjetas en 2 columnas y 2 filas usando Grid.   */
     .cards {
         display: grid;
+        grid-template-areas:
+        ".      team   ."
+        "superv team calc"
+        "superv karma calc"
+        ".      karma  ."
+        ;
+        gap: 30px;
+        width: 80%;
+        margin: 75px auto;
     }
+
+    .card-supervisor {grid-area: superv;}
+    .card-team-builder {grid-area: team;}
+    .card-karma {grid-area: karma;}
+    .card-calculator {grid-area: calc;}
+    
 }
 
 /** Ejercicio 2: Crea una nueva media query para que, cuando lleguemos como mínimo 1200px de viewport width, apliquemos cambiemos el grid a .card {} , con todas las propiedades necesarias para que se vea como en diseño final. Además, haz que todos los elementos del grid esten en el centro del cross axis  */
